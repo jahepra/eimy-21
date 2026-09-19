@@ -3,508 +3,516 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Eimy — 21 ❤️</title>
 
 <style>
-*{
-    box-sizing:border-box;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-    margin:0;
-    background:#08070b;
-    color:white;
-    font-family:Georgia,serif;
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background: #120b12;
+  color: #f8edf3;
+  line-height: 1.7;
 }
 
-section{
-    min-height:100vh;
-    padding:70px 20px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+section {
+  padding: 75px 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-.hero{
-    background:
-    radial-gradient(circle at 50% 25%,#702b48 0%,#24121f 38%,#08070b 80%);
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  background:
+    radial-gradient(circle at top, #5a304b 0%, #241421 45%, #120b12 100%);
 }
 
-.kicker{
-    font-family:Arial,sans-serif;
-    font-size:12px;
-    letter-spacing:4px;
-    text-transform:uppercase;
-    opacity:.75;
+.hero-content {
+  max-width: 750px;
 }
 
-h1{
-    font-size:clamp(65px,18vw,150px);
-    margin:15px 0;
-    letter-spacing:8px;
+.small {
+  font-size: 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  opacity: .75;
 }
 
-h2{
-    font-size:clamp(35px,9vw,70px);
-    margin:15px 0 25px;
+h1 {
+  font-size: clamp(60px, 14vw, 130px);
+  letter-spacing: 8px;
+  margin: 15px 0;
+  color: #fff4fa;
 }
 
-p{
-    max-width:700px;
-    font-size:18px;
-    line-height:1.8;
+.hero h2 {
+  font-size: clamp(24px, 5vw, 42px);
+  font-weight: normal;
+  margin-bottom: 20px;
 }
 
-.quote{
-    font-style:italic;
+.hero p {
+  font-size: 18px;
+  opacity: .9;
 }
 
-.btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:15px 28px;
-    border-radius:40px;
-    background:white;
-    color:#170c14;
-    text-decoration:none;
-    font-family:Arial,sans-serif;
-    font-weight:bold;
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 13px 25px;
+  border: 1px solid #eab5cf;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  transition: .3s;
 }
 
-.card{
-    width:min(720px,100%);
-    padding:30px;
-    margin:12px 0;
-    border:1px solid rgba(255,255,255,.15);
-    border-radius:28px;
-    background:rgba(255,255,255,.06);
+.btn:hover {
+  background: #eab5cf;
+  color: #241421;
 }
 
-.timeline{
-    width:min(700px,100%);
-    text-align:left;
+h2 {
+  font-size: clamp(30px, 6vw, 48px);
+  margin-bottom: 15px;
+  text-align: center;
 }
 
-.item{
-    margin:12px 0;
-    padding:20px;
-    border-left:2px solid white;
-    background:rgba(255,255,255,.06);
-    border-radius:0 18px 18px 0;
+.subtitle {
+  text-align: center;
+  opacity: .75;
+  margin-bottom: 35px;
 }
 
-.item b{
-    display:block;
-    margin-bottom:7px;
+.card {
+  background: rgba(255,255,255,.055);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 25px;
+  padding: 30px;
+  margin-top: 25px;
+  box-shadow: 0 15px 50px rgba(0,0,0,.25);
 }
 
-.gallery{
-    width:min(950px,100%);
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:9px;
+.story {
+  text-align: center;
+  font-size: 18px;
 }
 
-.gallery img{
-    width:100%;
-    aspect-ratio:1;
-    object-fit:cover;
-    border-radius:18px;
+.qualities {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 30px;
 }
 
-@media(min-width:700px){
-    .gallery{
-        grid-template-columns:repeat(4,1fr);
-    }
+.quality {
+  padding: 25px 15px;
+  text-align: center;
+  border-radius: 20px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
 }
 
-.special{
-    font-size:27px;
+.quality strong {
+  display: block;
+  font-size: 21px;
+  margin-bottom: 5px;
 }
 
-.small{
-    font-family:Arial,sans-serif;
-    font-size:12px;
-    opacity:.55;
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 30px;
 }
 
-.heart{
-    font-size:35px;
-    animation:pulse 1.5s infinite;
+.gallery img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  transition: transform .3s;
 }
 
-@keyframes pulse{
-    50%{
-        transform:scale(1.15);
-    }
+.gallery img:hover {
+  transform: scale(1.02);
+}
+
+.invitation {
+  text-align: center;
+}
+
+.invitation img {
+  width: 100%;
+  max-width: 650px;
+  max-height: 850px;
+  object-fit: contain;
+  border-radius: 22px;
+  margin: 25px auto;
+  display: block;
+  box-shadow: 0 15px 50px rgba(0,0,0,.45);
+}
+
+.letter {
+  font-size: 19px;
+  white-space: pre-line;
+}
+
+.signature {
+  margin-top: 30px;
+  text-align: right;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.final {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(180deg, #120b12, #351526);
+}
+
+.final h2 {
+  font-size: clamp(40px, 8vw, 70px);
+}
+
+.heart {
+  font-size: 50px;
+  margin: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  opacity: .5;
+  font-size: 13px;
+}
+
+@media (max-width: 650px) {
+
+  section {
+    padding: 60px 16px;
+  }
+
+  .qualities {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery img {
+    height: 380px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .letter {
+    font-size: 17px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-
 <!-- PORTADA -->
-
 <section class="hero">
+  <div class="hero-content">
 
-<div class="kicker">
-29.07.2026 → 21 años
-</div>
+    <div class="small">29.07.2026 → 21 años</div>
 
-<h1>EIMY</h1>
+    <h1>EIMY</h1>
 
-<p class="quote">
-"Una pequeña historia de nosotros...<br>
-y de todo lo que todavía nos falta vivir."
-❤️
-</p>
+    <h2>Una pequeña historia para alguien especial ❤️</h2>
 
-<a href="#historia" class="btn">
-Abrir mi regalo ✨
-</a>
+    <p>
+      Hoy no quería simplemente decirte<br>
+      "Feliz cumpleaños".
+    </p>
 
+    <a href="#historia" class="btn">
+      Empieza aquí ↓
+    </a>
+
+  </div>
 </section>
 
 
 <!-- HISTORIA -->
-
 <section id="historia">
 
-<div class="kicker">
-nuestros primeros capítulos
-</div>
+  <h2>Desde aquel 29 de julio...</h2>
 
-<h2>
-Desde aquel 29 de julio ❤️
-</h2>
+  <p class="subtitle">
+    Y pensar que todo comenzó hace tan poco.
+  </p>
 
-<div class="timeline">
+  <div class="card story">
 
-<div class="item">
-<b>29 de julio ❤️</b>
-El comienzo de nuestra historia.
-</div>
+    <p>
+      Desde aquel 29 de julio hemos ido creando nuestros propios recuerdos.
+      Algunos grandes, otros pequeños, pero todos especiales.
+    </p>
 
-<div class="item">
-<b>Autisha 🏔️</b>
-Un lugar que ahora también forma parte de nuestros recuerdos.
-</div>
+    <br>
 
-<div class="item">
-<b>Lunahuaná 🌿</b>
-Otra aventura que ahora forma parte de nuestra historia.
-</div>
+    <p>
+      Autisha, Lunahuaná, nuestras comidas, nuestras conversaciones,
+      nuestras fotos y todas esas pequeñas cosas que solamente nosotros
+      entendemos.
+    </p>
 
-<div class="item">
-<b>Nuestras salidas 🍽️</b>
-Restaurantes, conversaciones, risas y momentos que terminaron convirtiéndose en recuerdos.
-</div>
+    <br>
 
-</div>
+    <p>
+      Y hoy quiero guardar una parte de todo eso aquí.
+    </p>
+
+  </div>
 
 </section>
 
 
-<!-- LO QUE ME GUSTA -->
-
+<!-- LO QUE ME GUSTA DE ELLA -->
 <section>
 
-<div class="kicker">
-lo que me gusta de ti
-</div>
+  <h2>Lo que me gusta de ti ❤️</h2>
 
-<h2>
-Eres tú ❤️
-</h2>
+  <p class="subtitle">
+    Podría hacer una lista interminable...
+  </p>
 
-<div class="card">
+  <div class="qualities">
 
-<p>
-<b>Risueña.</b><br>
-Porque tu sonrisa tiene una manera muy tuya de cambiar el momento.
-</p>
+    <div class="quality">
+      <strong>😄 Risueña</strong>
+      Tu forma de sonreír hace que todo sea más bonito.
+    </div>
 
-<p>
-<b>Alegre.</b><br>
-Porque contigo hasta un plan sencillo puede terminar siendo un buen recuerdo.
-</p>
+    <div class="quality">
+      <strong>✨ Alegre</strong>
+      Tienes una manera muy tuya de contagiar alegría.
+    </div>
 
-<p>
-<b>Traviesa.</b><br>
-Porque nunca falta alguna ocurrencia tuya que me haga reír. 😂
-</p>
+    <div class="quality">
+      <strong>😏 Traviesa</strong>
+      Porque contigo nunca sé exactamente qué esperar.
+    </div>
 
-<p>
-<b>Inteligente.</b><br>
-Porque admiro tu forma de pensar y de afrontar las cosas.
-</p>
+    <div class="quality">
+      <strong>🧠 Inteligente</strong>
+      Porque admiro mucho tu forma de pensar.
+    </div>
 
-<p class="special">
-Y mi favorita...
-<br><br>
-<b>Ingeniera de la vida. ❤️</b>
-</p>
+    <div class="quality">
+      <strong>❤️ Ingeniera de la vida</strong>
+      Porque siempre encuentras la manera de seguir adelante.
+    </div>
 
-</div>
+    <div class="quality">
+      <strong>🥰 Tú</strong>
+      Simplemente tú. Y eso ya es suficiente.
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- FOTOS -->
-
+<!-- GALERÍA -->
 <section>
 
-<div class="kicker">
-nuestros recuerdos
-</div>
+  <h2>Nuestros recuerdos 📸</h2>
 
-<h2>
-Un poquito de nosotros 📸
-</h2>
+  <p class="subtitle">
+    Algunos momentos que ya forman parte de nuestra historia.
+  </p>
 
-<div class="gallery">
+  <div class="gallery">
 
-<img src="1.JPG">
-<img src="2.JPG">
-<img src="3.JPG">
-<img src="4.JPG">
+    <img src="./1.JPG" alt="Recuerdo 1">
+    <img src="./2.jpg" alt="Recuerdo 2">
+    <img src="./3.jpg" alt="Recuerdo 3">
+    <img src="./4.jpg" alt="Recuerdo 4">
+    <img src="./5.jpg" alt="Recuerdo 5">
+    <img src="./6.jpg" alt="Recuerdo 6">
+    <img src="./7.jpg" alt="Recuerdo 7">
+    <img src="./8.jpg" alt="Recuerdo 8">
+    <img src="./9.jpg" alt="Recuerdo 9">
+    <img src="./10.jpg" alt="Recuerdo 10">
+    <img src="./11.jpg" alt="Recuerdo 11">
+    <img src="./12.jpg" alt="Recuerdo 12">
+    <img src="./13.jpg" alt="Recuerdo 13">
+    <img src="./14.jpg" alt="Recuerdo 14">
+    <img src="./15.jpg" alt="Recuerdo 15">
 
-<img src="5.jpg">
-<img src="6.jpg">
-<img src="7.jpg">
-<img src="8.jpg">
-
-<img src="9.jpg">
-<img src="10.jpg">
-<img src="11.jpg">
-<img src="12.jpg">
-
-<img src="13.jpg">
-<img src="14.jpg">
-<img src="15.jpg">
-<img src="16.jpg">
-
-</div>
-
-<p class="small">
-Cada foto es un pedacito de nuestra historia.
-</p>
+  </div>
 
 </section>
 
 
-<!-- CUMPLEAÑOS -->
-
+<!-- MUSEO LARCO -->
 <section>
 
-<div class="kicker">
-mañana
-</div>
+  <h2>Y ahora... 🎂</h2>
 
-<h2>
-Tu cumpleaños 🎂
-</h2>
+  <p class="subtitle">
+    Porque tu cumpleaños también merece convertirse en un recuerdo.
+  </p>
 
-<div class="card">
+  <div class="card invitation">
 
-<h2 style="font-size:35px;">
-Museo Larco 🏛️
-</h2>
+    <h2 style="font-size:32px;">
+      Museo Larco 🏛️
+    </h2>
 
-<p>
-Una mesa para dos, un buen almuerzo
-y un cumpleaños que quiero que recuerdes.
-</p>
+    <p>
+      Hay una parte de este cumpleaños que ya conoces...
+      pero todavía queda mucho por descubrir.
+    </p>
 
-<p>
-Porque tus 21 merecen un día especial.
-❤️
-</p>
+    <img src="./16.jpg" alt="Invitación al Museo Larco">
 
-</div>
+    <p>
+      Esta es la invitación para nuestro momento especial.
+    </p>
+
+  </div>
+
+</section>
 
 
-<div class="card">
+<!-- SUNSET -->
+<section>
 
-<h2 style="font-size:35px;">
-Y después... 🌅
-</h2>
+  <h2>Después... 🌅</h2>
 
-<p>
-Un lugar con vista al mar para ver
-el sunset juntos.
-</p>
+  <div class="card story">
 
-<p>
-<b>
-Porque un día especial merece terminar
-con un recuerdo bonito.
-</b>
-</p>
+    <p>
+      Y cuando termine nuestro recorrido,
+      todavía queda una sorpresa.
+    </p>
 
-</div>
+    <br>
+
+    <p>
+      Un lugar frente al mar,
+      un sunset,
+      tú y yo...
+    </p>
+
+    <br>
+
+    <p>
+      Porque quería que este cumpleaños no fuera solamente
+      un día más.
+    </p>
+
+  </div>
 
 </section>
 
 
 <!-- CARTA -->
-
 <section>
 
-<div class="kicker">
-y ahora sí...
-</div>
+  <h2>Una carta para ti ❤️</h2>
 
-<h2>
-Una carta para ti ❤️
-</h2>
+  <div class="card letter">
 
-<div class="card">
-
-<p>
 Hoy cumples 21 y, aunque podría simplemente decirte
 "feliz cumpleaños", siento que te mereces algo más.
-</p>
 
-<p>
-Desde aquel 29 de julio han pasado muchas cosas
-en muy poco tiempo. Hemos viajado, conocido lugares,
-comido en varios sitios, tomado fotos, reído y,
-sobre todo, hemos ido conociéndonos un poquito más
-cada día.
-</p>
+Desde aquel 29 de julio han pasado muchas cosas en muy poco tiempo.
 
-<p>
-Y si tuviera que elegir qué es lo que más me gusta
-de ti, no sería una sola cosa.
-</p>
+Hemos tenido momentos divertidos, viajes, comidas,
+conversaciones, fotos y recuerdos que poco a poco
+se han convertido en nuestra historia.
 
-<p>
 Me gusta tu forma de ser.
-</p>
 
-<p>
-Me gusta esa manera tan tuya de ser
-<b>risueña y alegre</b>,
-de encontrar motivos para sonreír y hacer que
-los momentos sean más bonitos.
-</p>
+Tu manera de reírte.
+Tu alegría.
+Tus ocurrencias.
+Tu lado travieso.
+Tu inteligencia.
 
-<p>
-Me gusta tu lado <b>travieso</b>,
-porque contigo nunca sé exactamente qué ocurrencia
-vendrá después. 😂
-</p>
+Y sí...
 
-<p>
-Me gusta lo <b>inteligente</b> que eres y esa forma
-que tienes de enfrentar las cosas.
-</p>
-
-<p>
-Pero sobre todo me gusta esa versión de ti
-que quizás no aparece en las fotos:
-la Eimy que simplemente es Eimy.
-</p>
-
-<p class="special">
-<b>
 Mi ingeniera de la vida. ❤️
-</b>
-</p>
 
-<p>
-No sé qué nos tendrá preparado el futuro.
-Todavía nos faltan muchísimos lugares por conocer,
-restaurantes por probar, fotos por tomar y momentos
-que todavía ni siquiera imaginamos.
-</p>
-
-<p>
-Pero si algo me gusta de nuestra historia
-es que recién estamos comenzando.
-</p>
-
-<p>
 Espero que este nuevo año de tu vida venga lleno
-de sueños cumplidos, aventuras, risas y muchas
-cosas bonitas.
-</p>
+de cosas bonitas, nuevos sueños, nuevos logros
+y muchísimas razones para sonreír.
 
-<p>
-Y, si me permites, espero poder estar presente
-en varias de ellas.
-</p>
+Y espero también poder estar presente
+en muchos de esos momentos.
 
-<p>
-<b>
-Feliz cumpleaños, Eimy. ❤️
-</b>
-</p>
+No sé exactamente qué nos espera,
+pero sí sé que quiero seguir creando recuerdos contigo.
 
-<p>
-Que tus 21 sean tan especiales como tú.
-</p>
+Feliz cumpleaños, Eimy.
 
-<p>
-<b>
-Y recuerda algo:
-<br><br>
-Esto recién comienza.
-</b>
-❤️
-</p>
+Que tus 21 sean el comienzo de una etapa increíble.
 
-</div>
+    <div class="signature">
+      Con cariño ❤️<br>
+      J.
+    </div>
+
+  </div>
 
 </section>
 
 
 <!-- FINAL -->
+<section class="final">
 
-<section class="hero">
+  <div class="heart">❤️</div>
 
-<div class="kicker">
-para ti, Eimy
-</div>
+  <h2>Esto recién comienza.</h2>
 
-<h2>
-21 años.
-<br>
-Muchos recuerdos por venir.
-</h2>
+  <p>
+    Feliz 21, Eimy.
+  </p>
 
-<p>
-Feliz cumpleaños, mi Eimy. ❤️
-</p>
-
-<a
-class="btn"
-href="https://www.youtube.com/results?search_query=Tu+y+Yo+La+Misma+Gente"
-target="_blank">
-
-🎵 Tú y Yo
-
-</a>
-
-<p class="small">
-Toca el botón para escuchar la canción.
-</p>
-
-<div class="heart">
-❤️
-</div>
+  <a
+    class="btn"
+    href="https://www.youtube.com/results?search_query=Tu+y+Yo+La+Misma+Gente"
+    target="_blank"
+  >
+    🎵 Escuchar "Tú y Yo"
+  </a>
 
 </section>
 
+
+<footer>
+  Hecho especialmente para Eimy ❤️
+</footer>
 
 </body>
 </html>
